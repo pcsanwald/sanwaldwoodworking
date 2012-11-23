@@ -1,3 +1,6 @@
+.carousel-caption {
+    position: static;
+}
 #myCarousel {
     width: 400px;
 }
