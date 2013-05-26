@@ -1,6 +1,20 @@
 ---
 name: index
 ---
+  <style type="text/css">
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+    }
+
+  </style>
     <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide">
@@ -38,7 +52,7 @@ name: index
     <div class="container marketing">
         <!--<hr class="featurette-divider">-->
       <div class="featurette">
-        <h2 class="featurette-heading">Custom Woodwork.
+        <h2 class="featurette-heading">Custom Woodwork.</h2>
         <p class="lead">
         Roger and Judy have been building furniture for more than 40 years. Everything they do is handmade
         in Raleigh, North Carolina. From colonial period desks built without the aid of electric tools,
