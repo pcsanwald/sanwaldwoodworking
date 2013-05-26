@@ -50,6 +50,20 @@ helpers do
         end
         prefix + link_to(link,url,opts) + "</li>"
    end
+  # source: http://www.truespire.com/2009/05/30/obfuscating-email-addresses-in-ruby-on-rails/
+  def obscured_email_link(email, text=nil, classes=[])
+    return nil if email.nil? #Don't bother if the parameter is nil.
+    lower = ('a'..'z').to_a
+    upper = ('A'..'Z').to_a
+
+    obscured = email.split('').map { |char|
+      output = lower.index(char) + 97 if lower.include?(char)
+      output = upper.index(char) + 65 if upper.include?(char)
+      output ? "&##{output};" : (char == '@' ? '&#0064;' : char)
+    }.join
+    text ||= obscured
+    return "<a href=\"mailto:#{obscured}\" class=\"#{classes.join(' ')}\">#{text}</a>"
+  end
  end
 
 set :css_dir, 'stylesheets'
