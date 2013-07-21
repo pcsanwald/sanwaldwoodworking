@@ -84,7 +84,7 @@
 
     /* Carousel base class */
     .carousel {
-      margin-bottom: 60px;
+      margin-bottom: 10px;
     }
 
     .carousel .container {
@@ -103,7 +103,7 @@
     }
 
     .carousel .item {
-      height: 500px;
+      height: 350px;
     }
     .carousel img {
       position: absolute;
